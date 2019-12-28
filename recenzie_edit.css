@@ -1,0 +1,17 @@
+.navbar-expand-md {
+    background-color: rgb(24, 88, 51);
+    border-color: rgb(255, 252, 252);
+}
+
+.progress{
+    margin-top: 20px;
+}
+#question_bar{
+    margin-top: 70px;
+}
+#que{
+    margin-top: 20px;
+}
+.btn{
+    margin-left: 450px;
+}
