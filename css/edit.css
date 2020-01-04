@@ -1,0 +1,235 @@
+.navbar-expand-md {
+    background-color: rgb(24, 88, 51);
+    border-color: rgb(255, 252, 252);
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.thumbnail img{
+max-height: 100% !important;
+max-width: 100% !important;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    }
+    
+    .container.\31 25\25 {
+      width: 100%;
+      max-width: 1750px;
+      min-width: 1400px;
+      }
+      
+      .container.\37 5\25 {
+      width: 1050px;
+      }
+      
+      .container.\35 0\25 {
+      width: 700px;
+      }
+      
+      .container.\32 5\25 {
+      width: 350px;
+      }
+      
+      .container {
+      width: 1400px;
+      }
+      
+      @media screen and (max-width: 1920px) {
+      
+      .container.\31 25\25 {
+      width: 100%;
+      max-width: 1500px;
+      min-width: 1200px;
+      }
+      
+      .container.\37 5\25 {
+      width: 900px;
+      }
+      
+      .container.\35 0\25 {
+      width: 600px;
+      }
+      
+      .container.\32 5\25 {
+      width: 300px;
+      }
+      
+      .container {
+      width: 650px;
+      }
+      
+      }
+      
+      @media screen and (max-width: 1280px) {
+      
+      .container.\31 25\25 {
+      width: 100%;
+      max-width: 1200px;
+      min-width: 960px;
+      }
+      
+      .container.\37 5\25 {
+      width: 720px;
+      }
+      
+      .container.\35 0\25 {
+      width: 480px;
+      }
+      
+      .container.\32 5\25 {
+      width: 240px;
+      }
+      
+      .container {
+      width: 400px;
+        height: 170px;
+    }
+      
+      }
+      
+      @media screen and (max-width: 980px) {
+      
+      .container.\31 25\25 {
+      width: 100%;
+      max-width: 118.75%;
+      min-width: 95%;
+      }
+      
+      .container.\37 5\25 {
+      width: 71.25%;
+      }
+      
+      .container.\35 0\25 {
+      width: 47.5%;
+      }
+      
+      .container.\32 5\25 {
+      width: 23.75%;
+      }
+      
+      .container {
+      width: 95%;
+      }
+      
+      }
+      
+      @media screen and (max-width: 840px) {
+       
+      .container.\31 25\25 {
+      width: 100%;
+      max-width: 118.75%;
+      min-width: 95%;
+      }
+      
+      .container.\37 5\25 {
+      width: 71.25%;
+      }
+      
+      .container.\35 0\25 {
+      width: 47.5%;
+      }
+      
+      .container.\32 5\25 {
+      width: 23.75%;
+      }
+      
+      .container {
+      width: 100% !important;
+      height: 120px;
+    }
+      
+      }
+     
+      @media screen and (max-width: 741px) {
+      
+        .container.\31 25\25 {
+        width: 100%;
+        max-width: 118.75%;
+        min-width: 95%;
+        }
+        
+        .container.\37 5\25 {
+        width: 71.25%;
+        }
+        
+        .container.\35 0\25 {
+        width: 47.5%;
+        }
+        
+        .container.\32 5\25 {
+        width: 23.75%;
+        }
+        
+        .container {
+        width: 100% !important;
+        height: 310px;
+      }
+        
+        }
+       
+    
+      @media screen and (max-width: 736px) {
+      
+      .container.\31 25\25 {
+      width: 100%;
+      max-width: 125%;
+      min-width: 100%;
+      }
+      
+      .container.\37 5\25 {
+      width: 75%;
+      }
+      
+      .container.\35 0\25 {
+      width: 50%;
+      }
+      
+      .container.\32 5\25 {
+      width: 25%;
+      }
+      
+      .container {
+      width: 100% !important;
+      height: 300px;
+      }
+      
+      @media screen and (max-width: 410px) {
+      
+        .card.\31 25\25 {
+        width: 100%;
+        max-width: 125%;
+        min-width: 100%;
+        }
+        
+        .card.\37 5\25 {
+        width: 75%;
+        }
+        
+        .card.\35 0\25 {
+        width: 50%;
+        }
+        
+        .card.\32 5\25 {
+        width: 25%;
+        }
+        
+        .card {
+        width: 100% !important;
+        height: 370px;
+        padding-bottom: 100px !important;
+        }
