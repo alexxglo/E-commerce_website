@@ -132,10 +132,10 @@ padding: 5em;
 margin-left: auto;
 margin-right: auto;
 }
-
+@media screen and (max-width: 1930px){
 .container.\31 25\25 {
     width: 100%;
-    max-width: 1750px;
+    max-width: 1930px;
     min-width: 1400px;
     }
     
@@ -154,7 +154,7 @@ margin-right: auto;
     .container {
     width: 1400px;
     }
-    
+}
     @media screen and (max-width: 1680px) {
     
     .container.\31 25\25 {

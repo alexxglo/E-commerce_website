@@ -13,7 +13,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="/js/recenzii_js.js"></script>
     <meta name="theme-color" content="#563d7c">
 
 
@@ -51,13 +53,13 @@
     </nav>
 
         <main>
-        <div class="container">
-            <h1 id="question_bar" >Întrebarea: 1 din 5</h1>
+        <div class="container" id="cont">
             <div class="progress">
-            <div class="progress-bar bg-danger" role="progressbar" id="bar_color" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar bg-danger" role="progressbar" id="bar_color" style="width: 0%" aria-valuenow="0%" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
-          
-          <p class="lead" id="que">Cum vi s-a părut interfaţa acestui website?</p>
+          <div id="q1">
+            <h1 id="question_bar" >Întrebarea: 1 din 5</h1>
+            <p class="lead" id="que">Cum vi s-a părut interfaţa acestui website?</p>
           <form id>
             <div class="radio">
               <label><input type="radio" name="optradio">Foarte bună</label>
@@ -69,7 +71,94 @@
               <label><input type="radio" name="optradio">Dezamăgitoare</label>
             </div>
           </form>
-          <button type="button" class="btn btn-outline-danger">Următoarea întrebare</button>
+          <button type="button" id="q_1" class="btn btn-outline-danger">Următoarea întrebare</button>
+
+          </div>
+
+          <div id="q2">
+            <h1 id="question_bar" >Întrebarea: 2 din 5</h1>
+            <p class="lead" id="que">Cum vi se pare noul website?</p>
+            <form id>
+              <div class="radio">
+                <label><input type="radio" name="optradio">Mai bun ca primul</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="optradio">La fel</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="optradio">Mai slab ca primul</label>
+              </div>
+            </form>
+            <button type="button" id="q_2" class="btn btn-outline-danger">Următoarea întrebare</button>
+
+            </div>
+
+
+            <div id="q3">
+                <h1 id="question_bar" >Întrebarea: 3 din 5</h1>
+                <p class="lead" id="que">Cat de multumit sunteti de reducerile noastre?</p>
+                <form id>
+                  <div class="radio">
+                    <label><input type="radio" name="optradio">Foarte multumit</label>
+                  </div>
+                  <div class="radio">
+                    <label><input type="radio" name="optradio">Multumit</label>
+                  </div>
+                  <div class="radio">
+                    <label><input type="radio" name="optradio">Nemultumit</label>
+                  </div>
+                </form>
+                <button type="button" id="q_3" class="btn btn-outline-danger">Următoarea întrebare</button>
+
+                </div>
+
+
+                
+            <div id="q4">
+                <h1 id="question_bar" >Întrebarea: 4 din 5</h1>
+                <p class="lead" id="que">I-ati recomanda unui prieten acest website?</p>
+                <form id>
+                  <div class="radio">
+                    <label><input type="radio" name="optradio">Da</label>
+                  </div>
+                  <div class="radio">
+                    <label><input type="radio" name="optradio">Nu</label>
+                  </div>
+                  <div class="radio">
+                    <label><input type="radio" name="optradio">Nu stiu</label>
+                  </div>
+                </form>
+                <button type="button" id="q_4" class="btn btn-outline-danger">Următoarea întrebare</button>
+
+                </div>
+
+
+                
+            <div id="q5">
+                <h1 id="question_bar" >Întrebarea: 5 din 5</h1> 
+                <p class="lead" id="que">Veti mai comanda de pe Alyexpress in viitor?</p>
+                <form id>
+                  <div class="radio">
+                    <label><input type="radio" name="optradio">Da</label>
+                  </div>
+                  <div class="radio">
+                    <label><input type="radio" name="optradio">Nu</label>
+                  </div>
+                  <div class="radio">
+                    <label><input type="radio" name="optradio">Nu stiu</label>
+                  </div>
+                </form>
+                <button type="button" id="q_5" class="btn btn-outline-danger">Finalizare</button>
+
+                </div>
+
+               
+                
+            <div id="q6">
+                <p class="lead" id="que">Va multumim pentru feedback-ul acordat!</p>
+                </div>
+
+                
           </div>
           </main>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
