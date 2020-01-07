@@ -1,0 +1,65 @@
+.navbar-expand-md {
+    background-color: rgb(24, 88, 51);
+    border-color: rgb(255, 252, 252);
+}
+.progress{
+    margin-top: 100px;
+}
+#question_bar{
+    margin-top: 20px;
+}
+#que{
+    margin-top: 20px;
+}
+.btn{
+    margin-left: 450px;
+}
+#q2{
+    display: none;
+    visibility: hidden;
+}
+#q3{
+    display: none;
+    visibility: hidden;
+}
+#q4{
+    display: none;
+    visibility: hidden;
+}
+#q5{
+    display: none;
+    visibility: hidden;
+}
+#q6{
+    display: none;
+    visibility: hidden;
+}
+#checker{
+    display: none;
+    position: static;
+    top: 50%;
+    left: 50%;
+    
+}
+#neutral{
+    display: none;
+    position: static;
+    top: 50%;
+    left: 50%;
+    
+}
+#sad{
+    display: none;
+    position: static;
+    top: 50%;
+    left: 50%;
+    
+}
+.progress-bar {
+    -webkit-transition: width 2.5s ease;
+    transition: width 2.5s ease;
+}
+
+#q_1{
+    position: relative !important;
+}

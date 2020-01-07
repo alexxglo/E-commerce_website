@@ -13,8 +13,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
         
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>  
         <script src="/js/recenzii_js.js"></script>
     <meta name="theme-color" content="#563d7c">
 
@@ -53,43 +55,48 @@
     </nav>
 
         <main>
-        <div class="container" id="cont">
+          <div class="container" id="cont">
             <div class="progress">
             <div class="progress-bar bg-danger" role="progressbar" id="bar_color" style="width: 0%" aria-valuenow="0%" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
+          <i class="fa fa-heart d-inline text-danger" id="checker"></i>
+          <i class="fa fa-minus-circle d-inline text-warning" id="neutral"></i>
+          <i class="fa fa-tint d-inline text-primary" id="sad"></i>
+        
+          <div>
           <div id="q1">
             <h1 id="question_bar" >Întrebarea: 1 din 5</h1>
             <p class="lead" id="que">Cum vi s-a părut interfaţa acestui website?</p>
-          <form id>
+          <form class="type">
             <div class="radio">
-              <label><input type="radio" name="optradio">Foarte bună</label>
+              <label><input type="radio" name="optradio" id="good_check">Foarte bună</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="optradio">Bună</label>
+              <label><input type="radio" name="optradio" id="neutral_check">Bună</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="optradio">Dezamăgitoare</label>
+              <label><input type="radio" name="optradio" id="bad_check">Dezamăgitoare</label>
             </div>
           </form>
-          <button type="button" id="q_1" class="btn btn-outline-danger">Următoarea întrebare</button>
-
+          <button type="button" id="q_1" class="btn btn-outline-danger row">Următoarea întrebare</button>
           </div>
-
+        </div>
+        
           <div id="q2">
             <h1 id="question_bar" >Întrebarea: 2 din 5</h1>
             <p class="lead" id="que">Cum vi se pare noul website?</p>
             <form id>
               <div class="radio">
-                <label><input type="radio" name="optradio">Mai bun ca primul</label>
+                <label><input type="radio" name="optradio" id="good_check">Mai bun ca primul</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">La fel</label>
+                <label><input type="radio" name="optradio" id="neutral_check">La fel</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio">Mai slab ca primul</label>
+                <label><input type="radio" name="optradio" id="bad_check">Mai slab ca primul</label>
               </div>
             </form>
-            <button type="button" id="q_2" class="btn btn-outline-danger">Următoarea întrebare</button>
+            <button type="button" id="q_2" class="btn btn-outline-danger row">Următoarea întrebare</button>
 
             </div>
 
@@ -99,16 +106,16 @@
                 <p class="lead" id="que">Cat de multumit sunteti de reducerile noastre?</p>
                 <form id>
                   <div class="radio">
-                    <label><input type="radio" name="optradio">Foarte multumit</label>
+                    <label><input type="radio" name="optradio" id="good_check">Foarte multumit</label>
                   </div>
                   <div class="radio">
-                    <label><input type="radio" name="optradio">Multumit</label>
+                    <label><input type="radio" name="optradio" id="neutral_check">Multumit</label>
                   </div>
                   <div class="radio">
-                    <label><input type="radio" name="optradio">Nemultumit</label>
+                    <label><input type="radio" name="optradio" id="bad_check">Nemultumit</label>
                   </div>
                 </form>
-                <button type="button" id="q_3" class="btn btn-outline-danger">Următoarea întrebare</button>
+                <button type="button" id="q_3" class="btn btn-outline-danger row">Următoarea întrebare</button>
 
                 </div>
 
@@ -119,16 +126,16 @@
                 <p class="lead" id="que">I-ati recomanda unui prieten acest website?</p>
                 <form id>
                   <div class="radio">
-                    <label><input type="radio" name="optradio">Da</label>
+                    <label><input type="radio" name="optradio" id="good_check">Da</label>
                   </div>
                   <div class="radio">
-                    <label><input type="radio" name="optradio">Nu</label>
+                    <label><input type="radio" name="optradio" id="bad_check">Nu</label>
                   </div>
                   <div class="radio">
-                    <label><input type="radio" name="optradio">Nu stiu</label>
+                    <label><input type="radio" name="optradio" id="neutral_check">Nu stiu</label>
                   </div>
                 </form>
-                <button type="button" id="q_4" class="btn btn-outline-danger">Următoarea întrebare</button>
+                <button type="button" id="q_4" class="btn btn-outline-danger row">Următoarea întrebare</button>
 
                 </div>
 
@@ -139,16 +146,16 @@
                 <p class="lead" id="que">Veti mai comanda de pe Alyexpress in viitor?</p>
                 <form id>
                   <div class="radio">
-                    <label><input type="radio" name="optradio">Da</label>
+                    <label><input type="radio" name="optradio" id="good_check">Da</label>
                   </div>
                   <div class="radio">
-                    <label><input type="radio" name="optradio">Nu</label>
+                    <label><input type="radio" name="optradio" id="bad_check">Nu</label>
                   </div>
                   <div class="radio">
-                    <label><input type="radio" name="optradio">Nu stiu</label>
+                    <label><input type="radio" name="optradio" id="neutral_check">Nu stiu</label>
                   </div>
                 </form>
-                <button type="button" id="q_5" class="btn btn-outline-danger">Finalizare</button>
+                <button type="button" id="q_5" class="btn btn-outline-danger row">Finalizare</button>
 
                 </div>
 
@@ -161,17 +168,12 @@
                 
           </div>
           </main>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 </body>
 
 </html>
