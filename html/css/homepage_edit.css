@@ -3,10 +3,18 @@
     border-color: #fffcfc;
 
 }
-
-#nav_bar{
-    width:100%;
+body 
+{ background: rgb(24, 88,51) !important; } 
+             
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
+
 #myCarousel{
     margin-top: 56px;
 }

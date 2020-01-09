@@ -70,6 +70,97 @@ app.get('/logout', connect.ensureLoggedIn('/login'), (req, res) => {
   res.status(200).send({ message: "You've been logged out" });
 }
 )
+
+app.post('/comenzi/adaugare',(req,res) => {
+  const Comenzi = require('./models').Comenzi;
+  const name = req.body.name;
+  const location = req.body.location;
+  const noProducts = req.body.noProducts;
+  const totalSum = req.body.totalSum;
+  const date = req.body.date;
+
+  const comanda = {
+    name,
+    location,
+    noProducts,
+    totalSum,
+    date
+  }
+  Comenzi.create(comanda).then (() => {
+    res.status(200).send({ message:"Comanda inregistrata"});
+  }).catch(() =>{
+    res.status(500).send({message:"Comanda nu a fost inregistrata"});
+  })
+
+})
+
+app.post('/comenzi/afisare', (req, res) => {
+  const Comenzi = require('./models').Comenzi;
+  const dateInit = req.body.dateInit;
+  const dateFin = req.body.dateFin;
+  const sequelize = require('sequelize');
+  const op = sequelize.Op;
+  
+  Comenzi.findAll({
+    where: {
+      date: {
+        [op.between]: [dateInit, dateFin]
+      }
+    },
+    order: [['date', 'DESC']]
+  }).then(comenzi => {
+    res.status(200).send(comenzi);
+  }).catch(() => {
+    res.status(500).send({ message: "Eroare la db" });
+  })
+});
+
+app.get('/recenzii', (req, res) => {
+  const Recenzii = require('./models').Recenzii;
+  Recenzii.findAll().then((recenzii) => {
+    res.status(200).send(recenzii).redirect('/');
+  }).catch(() => {
+    res.status(500).send({ message: "Eroare la db" })
+  })
+});
+
+app.post('/produse/adaugare', (req, res) => {
+
+});
+
+app.get('/produse/activare', (req, res) => {
+
+});
+
+app.get('/produse/dezactivare', (req, res) => {
+
+});
+
+app.get('/produse/afisare', (req, res) => {
+  const Produse = require('./models').Produse;
+
+  Produse.findAll({
+    where: { eActivat: true }
+  }).then(produs => {
+    res.status(200).send(produs);
+  }).catch(() => {
+    res.status(500).send({ message: "Eroare la db" });
+  })
+})
+
+app.get('/reset', (req,res) =>{
+  const connection= require('./models').connection;
+  
+  connection.sync({ force: true }).then(
+    () => {
+    res.status(200).send({message:"Database reset"})
+  }).catch(
+    () => {
+      res.status(500).send({message:"Database reset error"}
+      )
+    })
+});
+
 app.use(express.static('../html',));
 
 app.listen(3000, "127.0.0.1", function () {

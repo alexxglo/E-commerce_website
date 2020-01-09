@@ -3,10 +3,11 @@
     border-color: #fffcfc;
 
 }
-#submit{
-    margin-top: 2%;
+
+#green{
+    background-color: rgb(24, 88, 51) !important;
 }
-  .container {
+.container {
     margin-left: auto;
     margin-right: auto;
     }
@@ -30,9 +31,9 @@
         }
         
         .container {
-            margin-top: 6%;
-            width: 700px;
-        }
+        width: 1400px;
+        margin-top: 80px;
+    }
     }
         @media screen and (max-width: 1680px) {
         
@@ -47,7 +48,7 @@
         }
         
         .container.\35 0\25 {
-        width: 600px;
+        width: 600px
         }
         
         .container.\32 5\25 {
@@ -55,9 +56,10 @@
         }
         
         .container {
-        margin-top: 6%;
-        width: 500px !important;
-        }
+        width: 1200px;
+        height: 600px; 
+        margin-top: 80px;
+    }
         
         }
         
@@ -83,7 +85,6 @@
         
         .container {
         width: 960px;
-        margin-top: 10%;
         }
         
         }
@@ -110,8 +111,8 @@
         
         .container {
         width: 95%;
-        margin-top: 10%;
-        }
+        margin-top: 80px;
+    }
         
         }
         
@@ -136,9 +137,9 @@
         }
         
         .container {
-        width: 95% ;
-        margin-top: 10%;
-        }
+        width: 95% !important;
+        margin-top: 80px;
+    }
         
         }
         
@@ -164,7 +165,6 @@
         
         .container {
         width: 100% !important;
-        margin-top: 18%;    
+        margin-top: 80px;    
     }
-        
-        
+        }

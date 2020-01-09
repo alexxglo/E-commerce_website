@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="generator" content="Jekyll v3.8.6">
     <title>Alyexpress</title>
-    <link rel="stylesheet" type="text/css" href="/css/admin_css.css">
+    <link rel="stylesheet" type="text/css" href="/css/cart_css.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/starter-template/">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- Bootstrap CSS -->
@@ -19,7 +19,7 @@
 
 </head>
 
-    <body class="container text-center">
+    <body class="bg-white">
         <nav class="navbar navbar-expand-md navbar-dark fixed-top">
             <a class="navbar-brand" href="index.html" class="text-reset text-decoration-none"><ins>Alyexpress</ins></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
@@ -47,19 +47,34 @@
                     </li>
                     
                 </ul>
+                <li class="nav-item navbar-nav">
+                    <a class="nav-link active" href="admin_page.html" class="text-reset text-decoration-none" tabindex="-1">Logare</a>
+                </li>
                 </div>
         </nav>
-    
-        <form class="form-signin">
-        <img class="mb-4" src="/images/diamond.svg" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 font-weight-normal">Autentificare</h1>
-        <label for="inputEmail" class="sr-only">Nume de utilizator</label>
-        <input type="text" id="username" class="form-control" placeholder="Nume de utilizator" required autofocus>
-        <label for="inputPassword" class="sr-only">Parola</label>
-        <input type="password" id="password" class="form-control" placeholder="Parola" required>
-        <input type="button" class="btn btn-success" value="Logheaza-te" id="submit"/>
-      </form>
-      <script src= "/js/admin.js"></script>
+
+        <div class="container">
+            <div class="d-flex align-items-center p-3 my-3 text-white-50 rounded shadow-sm" id="green">
+                <div class="lh-100">
+                  <p class="text-white display-4">Cosul de cumparaturi</p class="text-white display-4">
+                </div>
+              </div>
+            
+              <div class="my-3 p-3 rounded shadow-sm border border-dark" id="green">
+                <h6 class="border-bottom border-white pb-2 mb-0 font-weight-bold text-light">Aveti in lista: </h6>
+                <div class="pt-3">
+                  <p class="font-weight-light media-body pb-3 mb-0 text-light border-bottom border-white">
+                    Product#1
+                  </p>
+                </div>
+                  <button class="btn btn-outline-light d-block text-right mt-3">
+                    <a href="#" class="text-reset text-decoration-none">Finalizare comanda</a>
+                  </button>
+                    
+              </div>
+            
+        
+        </div>
 
     </body>
-</html>
+    </html>
