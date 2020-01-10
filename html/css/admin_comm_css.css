@@ -5,5 +5,14 @@
 
 .container{
 
-    margin-top: 25%;
+    margin-top: 10%;
+}
+
+body{
+    background-color: black !important;
+}
+
+#ascuns_1, #ascuns_2{
+    visibility: hidden ;
+    display: none ;
 }

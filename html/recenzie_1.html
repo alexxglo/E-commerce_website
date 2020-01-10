@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="generator" content="Jekyll v3.8.6">
-    <title>Alyexpress</title>
+    <title>Alyexpress - Recenzii</title>
     <link rel="stylesheet" type="text/css" href="/css/recenzie_edit.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/starter-template/">
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -43,7 +44,7 @@
                     <a class="nav-link active" href="promotions.html" class="text-reset text-decoration-none" tabindex="-1">Promoţii</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#"> Coşul meu</a>
+                    <a class="nav-link" href="cart.html"> Coşul meu</a>
                 <li class="nav-item">
                     <a class="nav-link active" href="recenzie_1.html" class="text-reset text-decoration-none" tabindex="-1">Recenzii</a>
                 </li>
@@ -71,15 +72,15 @@
           <div id="q1">
             <h1 id="question_bar" >Întrebarea: 1 din 5</h1>
             <p class="lead" id="que">Cum vi s-a părut interfaţa acestui website?</p>
-          <form class="type">
+          <form class="type" id="myselect">
             <div class="radio">
-              <label><input type="radio" name="optradio" id="good_check">Foarte bună</label>
+              <label><input type="radio" name="optradio" id="0">Foarte bună</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="optradio" id="neutral_check">Bună</label>
+              <label><input type="radio" name="optradio" id="1">Bună</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="optradio" id="bad_check">Dezamăgitoare</label>
+              <label><input type="radio" name="optradio" id="2">Dezamăgitoare</label>
             </div>
           </form>
           <button type="button" id="q_1" class="btn btn-outline-danger row">Următoarea întrebare</button>
@@ -91,13 +92,13 @@
             <p class="lead" id="que">Cum vi se pare noul website?</p>
             <form id>
               <div class="radio">
-                <label><input type="radio" name="optradio" id="good_check">Mai bun ca primul</label>
+                <label><input type="radio" name="optradio" id="0">Mai bun ca primul</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio" id="neutral_check">La fel</label>
+                <label><input type="radio" name="optradio" id="1">La fel</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="optradio" id="bad_check">Mai slab ca primul</label>
+                <label><input type="radio" name="optradio" id="2">Mai slab ca primul</label>
               </div>
             </form>
             <button type="button" id="q_2" class="btn btn-outline-danger row">Următoarea întrebare</button>
@@ -110,13 +111,13 @@
                 <p class="lead" id="que">Cat de multumit sunteti de reducerile noastre?</p>
                 <form id>
                   <div class="radio">
-                    <label><input type="radio" name="optradio" id="good_check">Foarte multumit</label>
+                    <label><input type="radio" name="optradio" id="0">Foarte multumit</label>
                   </div>
                   <div class="radio">
-                    <label><input type="radio" name="optradio" id="neutral_check">Multumit</label>
+                    <label><input type="radio" name="optradio" id="1">Multumit</label>
                   </div>
                   <div class="radio">
-                    <label><input type="radio" name="optradio" id="bad_check">Nemultumit</label>
+                    <label><input type="radio" name="optradio" id="2">Nemultumit</label>
                   </div>
                 </form>
                 <button type="button" id="q_3" class="btn btn-outline-danger row">Următoarea întrebare</button>
@@ -130,13 +131,13 @@
                 <p class="lead" id="que">I-ati recomanda unui prieten acest website?</p>
                 <form id>
                   <div class="radio">
-                    <label><input type="radio" name="optradio" id="good_check">Da</label>
+                    <label><input type="radio" name="optradio" id="0">Da</label>
                   </div>
                   <div class="radio">
-                    <label><input type="radio" name="optradio" id="bad_check">Nu</label>
+                    <label><input type="radio" name="optradio" id="1">Nu</label>
                   </div>
                   <div class="radio">
-                    <label><input type="radio" name="optradio" id="neutral_check">Nu stiu</label>
+                    <label><input type="radio" name="optradio" id="2">Nu stiu</label>
                   </div>
                 </form>
                 <button type="button" id="q_4" class="btn btn-outline-danger row">Următoarea întrebare</button>
@@ -150,13 +151,13 @@
                 <p class="lead" id="que">Veti mai comanda de pe Alyexpress in viitor?</p>
                 <form id>
                   <div class="radio">
-                    <label><input type="radio" name="optradio" id="good_check">Da</label>
+                    <label><input type="radio" name="optradio" id="0">Da</label>
                   </div>
                   <div class="radio">
-                    <label><input type="radio" name="optradio" id="bad_check">Nu</label>
+                    <label><input type="radio" name="optradio" id="1">Nu</label>
                   </div>
                   <div class="radio">
-                    <label><input type="radio" name="optradio" id="neutral_check">Nu stiu</label>
+                    <label><input type="radio" name="optradio" id="2">Nu stiu</label>
                   </div>
                 </form>
                 <button type="button" id="q_5" class="btn btn-outline-danger row">Finalizare</button>

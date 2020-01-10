@@ -6,19 +6,27 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
-    <title>Alyexpress - Promotii</title>
+    <title>Alyexpress - Admin</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>  
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/product/">
+
+    <script src= "/js/admin_comm.js"></script>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>  
 
     <link href="/css/admin_comm_css.css" rel="stylesheet">
   </head>
-  <body class="bg-danger">
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-danger">
         <a class="navbar-brand" href="index.html" class="text-reset text-decoration-none"><ins>Alyexpress</ins></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +45,7 @@
                     <a class="nav-link active" href="promotions.html" class="text-reset text-decoration-none" tabindex="-1">Promoţii</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#"> Coşul meu</a>
+                    <a class="nav-link" href="cart.html"> Coşul meu</a>
                 <li class="nav-item">
                     <a class="nav-link active" href="recenzie_1.html" class="text-reset text-decoration-none" tabindex="-1">Recenzii</a>
                 </li>
@@ -45,33 +53,47 @@
                 </li>
             </ul>
             <li class="nav-item navbar-nav">
-              <a class="nav-link active" href="admin_page.html" class="text-reset text-decoration-none" tabindex="-1">Logare</a>
+              <a class="nav-link active" href="admin_comm.html" class="text-reset text-decoration-none" tabindex="-1">Bine ai venit, Admin!</a>
           </li>
             </div>
     </nav>
     <div class="container marketing">
 
-        <!-- Three columns of text below the carousel -->
         <div class="row">
-          <div class="col-lg-4 bg-info border">
+          <div class="col-lg-4 bg-white border rounded-left">
             <img class="rounded-circle" src="/images/tag.svg" alt="Generic placeholder image" width="140" height="140">
             <h2>Produse</h2>
             <p>Functionalitati pentru adaugare produse, activare sau dezactivare de produse.</p>
-            <p><a class="btn btn-warning" href="#" role="button">Detalii &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4 bg-info border-top border-bottom">
+            <p><a class="btn btn-danger" href="admin_produse.html" role="button">Detalii &raquo;</a></p>
+          </div>
+          <div class="col-lg-4 bg-white border-top border-bottom">
             <img class="rounded-circle" src="/images/credit-card.svg" alt="Generic placeholder image" width="140" height="140">
             <h2>Comenzi</h2>
             <p>Pentru listarea tuturor comenzilor introduse de clienti.</p>
-            <p><a class="btn btn-warning" href="#" role="button">Detalii &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4 bg-info border">
+            <p><a class="btn btn-danger" href="#" id="show_comenzi" role="button">Afiseaza &raquo;</a></p>
+          </div>
+          <div class="col-lg-4 bg-white border rounded-right">
             <img class="rounded-circle" src="/images/archive.svg" alt="Generic placeholder image" width="140" height="140">
             <h2>Recenzii</h2>
             <p>Pentru listarea tuturor recenziilor introduse pe site</p>
-            <p><a class="btn btn-warning" href="#" role="button">Detalii &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
+            <p><a class="btn btn-danger" href="#" id="show_recenzii" role="button">Afiseaza &raquo;</a></p>
+          </div>
+        </div>
+      
+        
+        <div class="container bg-white border border-dark" id="ascuns_1">
 
+        </div>
+
+        <div class="container bg-white border border-dark" id="ascuns_2">
+          
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 </body>
 </html>

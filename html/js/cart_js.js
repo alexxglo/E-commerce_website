@@ -1,22 +1,61 @@
-let products=[
+let list;
+// needs add to cart route
+axios.get('/produse/afisare').then(response => {
+  list = response.data.produs;
+})
+console.log(list);
+$(document).ready(function()
+   {
+let products=
     {
         id:1,
         denumire:"Asus",
         pret: 50
-    },
-    {
-        id:2,
-        denumire:"Nvidia",
-        pret: 25
     }
-]
 
-let dad_elem = document.createElement('div');
-dad_elem.classList.add('pt-3');
+    $("#fin_com").click(function () {
 
-let child_elem = document.createElement('p');
-child_elem.classList.add('font-weight-light media-body pb-3 mb-0 text-light border-bottom border-white');
+      $("#green").hide();
+      $("#text_ascuns").show().css("visibility", "visible");
+    });
+
+$("main").prepend(
+    $('<div>',
+    {
+      class:'row pt-3'
+    }).append(
+      $('<p>',
+    { 
+      class:'col font-weight-light media-body pb-3 mb-0 text-light border-bottom border-white'       
+    })
+      .append(
+        products.denumire
+      )
+  ).append(
+    $('<p>',
+  { 
+    class:'col font-weight-light media-body pb-3 mb-0 text-light border-bottom border-white text-right'       
+  })
+    .append(
+      products.pret+" lei"
+    )
+)
+  );  
+      });
 
 
-let id= document.getElementById(); 
-child_elem.appendChild()
+
+      
+      /*
+      
+
+      <div class="row pt-3">
+        
+        <p class="col font-weight-light media-body pb-3 mb-0 text-light border-bottom border-white">
+          Product#1
+        </p>
+        <p class="col font-weight-light media-body pb-3 mb-0 text-light border-bottom border-white text-right">70lei</p>
+      
+      </div>
+
+      */

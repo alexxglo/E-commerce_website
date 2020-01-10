@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="generator" content="Jekyll v3.8.6">
-    <title>Alyexpress</title>
+    <title>Alyexpress - Cos produse</title>
     <link rel="stylesheet" type="text/css" href="/css/cart_css.css">
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/starter-template/">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="js/cart_js.js"></script>
     <meta name="theme-color" content="#563d7c">
 
 
@@ -39,7 +40,7 @@
                         <a class="nav-link active" href="promotions.html" class="text-reset text-decoration-none" tabindex="-1">Promoţii</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#"> Coşul meu</a>
+                        <a class="nav-link" href="cart.html"> Coşul meu</a>
                     <li class="nav-item">
                         <a class="nav-link active" href="recenzie_1.html" class="text-reset text-decoration-none" tabindex="-1">Recenzii</a>
                     </li>
@@ -54,26 +55,21 @@
         </nav>
 
         <div class="container">
-            <div class="d-flex align-items-center p-3 my-3 text-white-50 rounded shadow-sm" id="green">
+            <div class="d-flex align-items-center p-3 my-3 text-white-50 rounded shadow-sm" id="green2">
                 <div class="lh-100">
-                  <p class="text-white display-4">Cosul de cumparaturi</p class="text-white display-4">
+                  <p class="text-white display-4">Coşul de cumpărături</p class="text-white display-4">
                 </div>
               </div>
             
-              <div class="my-3 p-3 rounded shadow-sm border border-dark" id="green">
-                <h6 class="border-bottom border-white pb-2 mb-0 font-weight-bold text-light">Aveti in lista: </h6>
-                <div class="pt-3">
-                  <p class="font-weight-light media-body pb-3 mb-0 text-light border-bottom border-white">
-                    Product#1
-                  </p>
-                </div>
-                  <button class="btn btn-outline-light d-block text-right mt-3">
+              <main class="my-3 p-3 rounded shadow-sm border border-dark" id="green">
+                  
+                  <button class="btn btn-outline-light d-block text-right mt-3" id="fin_com">
                     <a href="#" class="text-reset text-decoration-none">Finalizare comanda</a>
                   </button>
                     
-              </div>
+              </main>
             
-        
+        <p id="text_ascuns">Multumim pentru comanda!</p>
         </div>
 
     </body>

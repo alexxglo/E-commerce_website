@@ -3,8 +3,14 @@
     border-color: #fffcfc;
 
 }
-
+#text_ascuns{
+    visibility: hidden;
+    display: none;
+}
 #green{
+    background-color: rgb(24, 88, 51) !important;
+}
+#green2{
     background-color: rgb(24, 88, 51) !important;
 }
 .container {

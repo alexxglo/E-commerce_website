@@ -114,27 +114,84 @@ app.post('/comenzi/afisare', (req, res) => {
     res.status(500).send({ message: "Eroare la db" });
   })
 });
+app.post('/recenzii/adaugare', (req, res) => {
+  const Recenzii = require('./models').Recenzii;
+  const recenzie = { recenzie: req.body.recenzie };
 
-app.get('/recenzii', (req, res) => {
+  Recenzii.create(recenzie).then(() => {
+    res.status(200).send({ message: "Recenzie inregistrata" });
+  }).catch(() => {
+    res.status(500).send({ message: "Recenzia nu a fost incarcata" })
+  })
+});
+
+app.get('/recenzii/afisare', (req, res) => {
   const Recenzii = require('./models').Recenzii;
   Recenzii.findAll().then((recenzii) => {
-    res.status(200).send(recenzii).redirect('/');
+    res.status(200).send(recenzii);
   }).catch(() => {
     res.status(500).send({ message: "Eroare la db" })
   })
 });
 
-app.post('/produse/adaugare', (req, res) => {
+const multer = require('multer');
+let storage = multer.diskStorage({
+  destination: './uploads',
+  filename: (req, file, cb) => {
+    cb(null, file.originalname)
+  }
+})
+const upload = multer({ storage: storage });
+
+app.post('/produse/adaugare', upload.single('image'), (req, res) => {
+  const Produse = require('./models').Produse;
+
+  const denumire = req.body.denumire;
+  const specificatiiMinime = req.body.specificatiiMinime;
+  const pret = req.body.pret;
+  const descriere = req.body.descriere;
+  const poza = req.file.path;
+  const produs = {
+    denumire,
+    specificatiiMinime,
+    pret,
+    descriere,
+    poza
+  }
+  Produse.create(produs).then(() => {
+    res.status(200).send({ message: "Reusit" });
+  }).catch(() => {
+    res.status(500).send({ message: "Fail" });
+  })
 
 });
 
-app.get('/produse/activare', (req, res) => {
+app.post('/produse/activare', (req, res) => {
+  const Produse = require('./models').Produse;
 
+  const denumire = req.body.denumire;
+  Produse.findOne({ where: { denumire } }).then(produs => {
+    produs.eActivat = true;
+    produs.save({ fields: ['eActivat'] });
+    res.status(200).send({ message: "Bravo" });
+  }).catch(() => {
+    res.status(500).send({ message: ":(" })
+  })
 });
 
-app.get('/produse/dezactivare', (req, res) => {
+app.post('/produse/dezactivare', (req, res) => {
+  const Produse = require('./models').Produse;
 
+  const denumire = req.body.denumire;
+  Produse.findOne({ where: { denumire } }).then(produs => {
+    produs.eActivat = false;
+    produs.save({ fields: ['eActivat'] });
+    res.status(200).send({ message: "Bravo" });
+  }).catch(() => {
+    res.status(500).send({ message: ":(" })
+  })
 });
+
 
 app.get('/produse/afisare', (req, res) => {
   const Produse = require('./models').Produse;

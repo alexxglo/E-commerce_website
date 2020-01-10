@@ -1,3 +1,4 @@
+/*
 $(document).ready(function(){
 
  // Add new element
@@ -63,4 +64,63 @@ $(document).ready(function(){
 
         
    });
-  
+*/
+
+   $(document).ready(function()
+   {
+    var produs={
+      denumire:"Placă video Asus Radeon RX 580 Dual OC, 4GB GDDR5, 256-bit",
+      pret:700,
+      specificatiiMinime:"La un pret incantator, placa video de la Asus ajunge si pe Alyexpress. La un pret redus, bineinteles. Comanda-l acum si ia parte in aventura gaming-ului! "
+    }
+     $("main").append(
+      $('<div>',
+      {
+        class:'col text-center'
+      }).append(
+        $('<picture>',
+      { 
+        id:'test'       
+      })
+        .html(
+          '<img src="/images/rx580.png">'
+        )
+    ));
+    
+    $("main").append(
+      $('<div>',
+      {
+        class:'col text-center'
+      }).append($('<h3>').append(produs.denumire)
+      )
+        .append($('<small>').append(produs.specificatiiMinime))
+        .append($('<br>'))
+        .append($('<button>',
+          {
+            class:'btn btn-outline-success'
+          }
+        ).append(produs.pret+' lei')
+        )
+   );
+  });
+    
+/*
+   <div class="col text-center">
+   <picture"><img src="/images/rx580.png"></picture>
+</div>
+<div class="col text-center">
+   <h3>Placă video Asus Radeon RX 580 Dual OC, 4GB GDDR5, 256-bit</h3>            
+   <small>La un pret incantator, placa video de la Asus ajunge si pe Alyexpress. La un pret redus, bineinteles. Comanda-l acum si ia parte in aventura gaming-ului! </small>
+   <br>
+   <button class="btn btn-outline-danger">Cumpara acum</button>
+</div>
+
+<div class="col text-center">
+<picture><img src="/images/rx580.png"></picture>
+</div>
+<div class="col text-center">
+<h3>Placă video Asus Radeon RX 580 Dual OC, 4GB GDDR5, 256-bit</h3>            
+<small>La un pret incantator, placa video de la Asus ajunge si pe Alyexpress. La un pret redus, bineinteles. Comanda-l acum si ia parte in aventura gaming-ului! </small>
+<br>
+<button class="btn btn-outline-danger">Cumpara acum</button>
+</div> */
