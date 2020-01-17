@@ -5,7 +5,9 @@
 .breadcrumb-item+.breadcrumb-item::before {
     content: ">"
 }
-
+#cutie{
+    margin-top: 50px !important;
+}
 #butoane{
     margin-left: 15px;
     margin-top: 30px;

@@ -41,7 +41,7 @@
                     <a class="nav-link" href="index.html" class="text-reset text-decoration-none">Acasă <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="produse.html" class="text-reset text-decoration-none">Produse</a>
+                    <a class="nav-link" href="produs_singular.html" class="text-reset text-decoration-none">Produse</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="promotions.html" class="text-reset text-decoration-none" tabindex="-1">Promoţii</a>
@@ -64,23 +64,23 @@
     <form class="mr-5 ml-5"style="margin-top: 15%;" id=>
         <div class="form-group"> <!--denumire-->
           <label for="exampleFormControlInput1 text-white" id="text-color-white">Denumire</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nume produs">
+          <input type="text" class="form-control" id="denumire" placeholder="Nume produs">
         </div>
         <div class="form-group"> <!--pret-->
             <label for="exampleFormControlInput1" id="text-color-white">Pret</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Pret produs">
+            <input type="text" class="form-control" id="pret" placeholder="Pret produs">
           </div>
           <div class="form-group"> <!--specificatiiMinime-->
             <label for="exampleFormControlInput1" id="text-color-white">Specificatii minime</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Specificatii produs">
+            <input type="text" class="form-control" id="specificatii" placeholder="Specificatii produs">
           </div>
         <div class="form-group"> <!--descriere-->
           <label for="exampleFormControlTextarea1" id="text-color-white">Descriere</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <textarea class="form-control" id="descriere" rows="3"></textarea>
         </div>
         <div class="form-group"> <!--poza-->
             <label for="exampleFormControlFile1" id="text-color-white">Poza produs</label>
-            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            <input type="file" class="form-control-file" id="poza">
           </div>
           <div class="form-group"> <!--eActiv-->
             <label for="exampleFormControlSelect1" id="text-color-white">Activeaza?</label>
@@ -90,16 +90,16 @@
             </select>
           </div>
           <div class="col text-center">
-  <button type="submit" class="btn btn-danger">Introdu</button></div>
+  <button id="submitAdd" type="submit" class="btn btn-danger">Introdu</button></div>
       </form>
 
       <form class="ml-5 mr-5" style="margin-top: 2%;">
         <label for="exampleFormControlSelect1" id="text-color-white">Introdu denumire produs pentru activare</label>
         <div class="form-row">
           <div class="col-7">
-            <input type="text" class="form-control" placeholder="Nume produs">
+            <input id="nume" type="text" class="form-control" placeholder="Nume produs">
           </div>       
-          <button type="submit" class="btn btn-danger">Turn on!</button></div>
+          <button id="submitActivate" type="submit" class="btn btn-danger">Turn on!</button></div>
         </div>
       </form>
 
@@ -107,9 +107,9 @@
         <label for="exampleFormControlSelect1" id="text-color-white">Introdu denumire produs pentru dezactivare</label>
         <div class="form-row">
           <div class="col-7">
-            <input type="text" class="form-control" placeholder="Nume produs">
+            <input id="nume2" type="text" class="form-control" placeholder="Nume produs">
           </div>
-          <button type="submit" class="btn btn-danger">Turn off!</button></div>
+          <button id="submitDeactivate" type="submit" class="btn btn-danger">Turn off!</button></div>
         </div>
       </form>
 
